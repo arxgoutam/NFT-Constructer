@@ -1,0 +1,289 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9f9fc;
+    font-family: "Urbanist", sans-serif;
+    color: #b0b0b0;
+}
+
+h1,
+h2,
+h3 {
+    color: #061237;
+}
+
+a {
+    text-decoration: none;
+    color: #061237;
+}
+
+li {
+    list-style-type: none;
+}
+
+button,
+input,
+textarea,
+select {
+    outline: none;
+    border: none;
+    background: none;
+    font-family: "Urbanist", sans-serif;
+    color: #061237;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    font-weight: 500;
+    color: #cecece;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    font-weight: 500;
+    color: #cecece;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-weight: 500;
+    color: #cecece;
+}
+
+button,
+select {
+    cursor: pointer;
+}
+
+.container {
+    /* width: 1250px; */
+    margin: auto;
+}
+
+.project-requirements-page {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.project-requirements-page .hero {
+    width: 100%;
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.project-requirements-page .hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-requirements-page .hero .container .logo {
+    margin: 0 0 75px 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-requirements-page .hero .container .logo img {
+    margin: 0 0 15px 0;
+    width: 100px;
+}
+
+.project-requirements-page .hero .container .logo h1 {
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #7057ed;
+}
+
+.project-requirements-page .hero .container .steps {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-requirements-page .hero .container .steps .step {
+    width: 750px;
+    padding: 75px 50px;
+    background: #ffffff;
+    box-shadow: 0 14px 49px rgba(108, 84, 234, 0.06);
+    border-radius: 25px;
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .project-requirements-page .hero .container .steps .step {
+        width: 100%;
+        padding: 75px 25px;
+    }
+}
+
+.project-requirements-page .hero .container .steps .step.active {
+    display: block;
+}
+
+.project-requirements-page .hero .container .steps .step h2 {
+    margin: 0 0 15px 0;
+    text-align: center;
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 50px;
+}
+
+.project-requirements-page .hero .container .steps .step .subtitle {
+    margin: 0 0 50px 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+}
+
+.project-requirements-page .hero .container .steps .step .inputs-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.project-requirements-page .hero .container .steps .step .input-group {
+    margin: 0 0 20px 0;
+    width: 100%;
+}
+
+.project-requirements-page .hero .container .steps .step .input-group label {
+    margin: 0 0 12px 0;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #061237;
+}
+
+.project-requirements-page .hero .container .steps .step .input-group input {
+    width: 100%;
+    height: 55px;
+    padding: 0px 15px;
+    border: 2px solid #f2f2f2;
+    background: #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.project-requirements-page .hero .container .steps .step .input-group select {
+    width: 100%;
+    height: 55px;
+    padding: 0px 15px;
+    border: 2px solid #f2f2f2;
+    background: #ffffff;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.project-requirements-page .hero .container .steps .step .input-group .placeholder-input {
+    position: relative;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.project-requirements-page .hero .container .steps .step .input-group .placeholder-input:hover {
+    opacity: 0.7;
+}
+
+.project-requirements-page .hero .container .steps .step .input-group .placeholder-input input {
+    cursor: pointer;
+}
+
+.project-requirements-page .hero .container .steps .step .input-group .placeholder-input button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #7057ed;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    pointer-events: none;
+}
+
+.project-requirements-page .hero .container .steps .step .cta-btn {
+    margin: 0 0 20px 0;
+    width: 100%;
+    height: 55px;
+    border-radius: 10px;
+    background: #7057ed;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.project-requirements-page .hero .container .steps .step .cta-btn:hover {
+    opacity: 0.7;
+}
+
+.project-requirements-page .hero .container .steps .step .btns {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.project-requirements-page .hero .container .steps .step .btns button {
+    margin: 0 5px 0 0;
+}
+
+.project-requirements-page .hero .container .steps .step .btns button:last-child {
+    margin-right: 0px;
+}
+
+.project-requirements-page .hero .container .steps .step .btns .prev-btn {
+    width: 40px;
+    height: 40px;
+    background: #999999;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.project-requirements-page .hero .container .steps .step .btns .prev-btn:hover {
+    opacity: 0.7;
+}
+
+.project-requirements-page .hero .container .steps .step .btns .next-btn {
+    width: 40px;
+    height: 40px;
+    background: #7057ed;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.project-requirements-page .hero .container .steps .step .btns .next-btn:hover {
+    opacity: 0.7;
+}
+
+.project-requirements-page .hero .container .copyright {
+    margin: 15px 0 0 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+/*# sourceMappingURL=App.css.map */

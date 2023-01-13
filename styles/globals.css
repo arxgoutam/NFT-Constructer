@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+
+/*===== VARIABLES CSS =====*/
+
+:root {
+    /*========== Colors ==========*/
+    --main-color: #6e58eb;
+    --second-color: #061237;
+    --black-color: #000000;
+    --title-color: #393939;
+    --white-color: #ffffff;
+    /* --main-gradient: linear-gradient(180deg, #5740f9 0%, #8732e0 100%); */
+    /*========== Font and typography ==========*/
+    --body-font: "Raleway", sans-serif;
+    --sec-title-font: 25px;
+    --p-font: 16px;
+    --m-title: 25px;
+    --l-title: 36px;
+    --p-font-height: 30px;
+    --lp-font-height: 50px;
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    /*========== Margin ==========*/
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen and (max-width: 1200px) {
+     :root {
+        --p-font: 14px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+     :root {
+        --l-title: 35px;
+        --m-title: 24px;
+        --p-font: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+     :root {
+        --l-title: 25px;
+        --m-title: 20px;
+    }
+}
+
+
+/* ==================CSS Variable END========= */
+
+
+/*========== BASE ==========*/
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8faff;
+    color: #616161;
+    font-size: var(--p-font);
+    font-weight: 400;
+    font-family: var(--body-font) !important;
+    line-height: var(--p-font-height);
+    overflow-x: hidden;
+}
+
+img {
+    vertical-align: middle;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+ul,
+ol {
+    padding: 0;
+    list-style: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.container {
+    max-width: 1340px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+
+/* ============================GENERAL STYLE END======= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+span,
+label {
+    margin: 0;
+}
+
+.ovh {
+    overflow: hidden;
+}
+
+table.table {
+    white-space: nowrap;
+}
+
+
+/* ===================custom button============ */
+
+.custom-btn {
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: var(--main-color);
+    color: #fff;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.custom-btn:hover {
+    color: var(--white-color);
+    background: var(--second-color);
+}
+
+.custom-btn:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%) scale(0);
+    width: 1px;
+    height: 1px;
+    background: var(--white-color);
+    opacity: 0;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+.custom-btn:hover:before {
+    transform: translate(-50%) scale(310);
+    opacity: 1;
+}
+
+.custom-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ===================custom button end=============== */
+
+.custom-btn-alt {
+    display: inline-block;
+    border-radius: 50px;
+    font-size: var(--p-font);
+    color: var(--main-color);
+    font-weight: 500;
+    text-transform: capitalize;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding: 10px 35px;
+    box-shadow: 1px 1px 40px rgb(0 0 0 / 10%);
+    outline: none;
+    transition: 0.3s;
+    border: none;
+    background: var(--white-color);
+    text-transform: uppercase;
+}
+
+.custom-btn-alt:hover {
+    color: var(--white-color);
+}
+
+.custom-btn-alt:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%) scale(0);
+    width: 1px;
+    height: 1px;
+    background: var(--main-color);
+    opacity: 0;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+.custom-btn-alt:hover:before {
+    transform: translate(-50%) scale(310);
+    opacity: 1;
+}
+
+.custom-btn-alt span {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ===============custom button alt=============== */
+
+.btn:focus {
+    outline: 0px;
+    box-shadow: none;
+}
+
+
+/* =============padding margin class============= */
+
+.me-3 {
+    margin-right: 30px;
+}
+
+.mt-3 {
+    margin-top: 30px;
+}
+
+.cpy-5 {
+    padding: 50px 0;
+}
+
+.cpy-8 {
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.cpy-6 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.cpt-6 {
+    padding-top: 100px;
+}
+
+.cpb-6 {
+    padding-bottom: 100px;
+}
+
+.cpt-7 {
+    padding-top: 80px;
+}
+
+.cpb-7 {
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 992px) {
+    .cpy-5 {
+        padding: 40px 0;
+    }
+    .cpy-8 {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    .cpy-6 {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .cpt-6 {
+        padding-top: 80px;
+    }
+    .cpb-6 {
+        padding-bottom: 80px;
+    }
+    .cpt-7 {
+        padding-top: 60px;
+    }
+    .cpb-7 {
+        padding-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cpy-5 {
+        padding: 30px 0;
+    }
+    .cpy-8 {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .cpy-6 {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .cpt-6 {
+        padding-top: 60px;
+    }
+    .cpb-6 {
+        padding-bottom: 60px;
+    }
+    .cpt-7 {
+        padding-top: 40px;
+    }
+    .cpb-7 {
+        padding-bottom: 40px;
+    }
+}

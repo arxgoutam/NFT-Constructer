@@ -1,0 +1,186 @@
+// Page: Project Requirements
+.project-requirements-page {
+    width: 100%;
+    overflow-x: hidden;
+    .hero {
+        width: 100%;
+        padding: 150px 0;
+        display: flex;
+        justify-content: center;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .logo {
+                margin: 0 0 75px 0;
+                width: fit-content;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    margin: 0 0 15px 0;
+                    width: 100px;
+                }
+                h1 {
+                    font-size: 18px;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    color: #7057ed;
+                }
+            }
+            .steps {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .step {
+                    width: 750px;
+                    padding: 75px 50px;
+                    background: #ffffff;
+                    box-shadow: 0 14px 49px rgba(108, 84, 234, 0.06);
+                    border-radius: 25px;
+                    display: none;
+                    @media (max-width: 768px) {
+                        width: 100%;
+                        padding: 75px 25px;
+                    }
+                    &.active {
+                        display: block;
+                    }
+                    h2 {
+                        margin: 0 0 15px 0;
+                        text-align: center;
+                        font-size: 46px;
+                        font-weight: 800;
+                    }
+                    .subtitle {
+                        margin: 0 0 50px 0;
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 28px;
+                        text-align: center;
+                    }
+                    .inputs-group {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-gap: 20px;
+                    }
+                    .input-group {
+                        margin: 0 0 20px 0;
+                        width: 100%;
+                        label {
+                            margin: 0 0 12px 0;
+                            display: block;
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: #061237;
+                        }
+                        input {
+                            width: 100%;
+                            height: 55px;
+                            padding: 0px 15px;
+                            border: 2px solid #f2f2f2;
+                            background: #ffffff;
+                            border-radius: 10px;
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        select {
+                            width: 100%;
+                            height: 55px;
+                            padding: 0px 15px;
+                            border: 2px solid #f2f2f2;
+                            background: #ffffff;
+                            border-radius: 10px;
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        .placeholder-input {
+                            position: relative;
+                            width: 100%;
+                            transition: all 0.3s ease;
+                            &:hover {
+                                opacity: 0.7;
+                            }
+                            input {
+                                cursor: pointer;
+                            }
+                            button {
+                                position: absolute;
+                                top: 0px;
+                                left: 0px;
+                                width: 100%;
+                                height: 100%;
+                                background: #7057ed;
+                                border-radius: 10px;
+                                font-size: 16px;
+                                font-weight: 600;
+                                color: #ffffff;
+                                pointer-events: none;
+                            }
+                        }
+                    }
+                    .cta-btn {
+                        margin: 0 0 20px 0;
+                        width: 100%;
+                        height: 55px;
+                        border-radius: 10px;
+                        background: #7057ed;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #ffffff;
+                        transition: all 0.3s ease;
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                    .btns {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        button {
+                            margin: 0 5px 0 0;
+                            &:last-child {
+                                margin-right: 0px;
+                            }
+                        }
+                        .prev-btn {
+                            width: 40px;
+                            height: 40px;
+                            background: #999999;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: all 0.3s ease;
+                            &:hover {
+                                opacity: 0.7;
+                            }
+                        }
+                        .next-btn {
+                            width: 40px;
+                            height: 40px;
+                            background: #7057ed;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: all 0.3s ease;
+                            &:hover {
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+            .copyright {
+                margin: 15px 0 0 0;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 24px;
+                text-align: center;
+            }
+        }
+    }
+}

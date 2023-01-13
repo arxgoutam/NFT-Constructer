@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9f9fc;
+    font-family: $primary-font-family;
+    color: $secondary-text-color;
+}
+
+h1,
+h2,
+h3 {
+    color: $primary-text-color;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-text-color;
+}
+
+li {
+    list-style-type: none;
+}
+
+button,
+input,
+textarea,
+select {
+    outline: none;
+    border: none;
+    background: none;
+    font-family: $primary-font-family;
+    color: $primary-text-color;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-weight: 500;
+    color: $placeholder-text-color;
+}
+
+button,
+select {
+    cursor: pointer;
+}
